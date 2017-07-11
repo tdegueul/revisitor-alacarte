@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<simpleimp:Block xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:varexpimp="http://varexpimp/" xmlns:boolexp="http://boolexp/" xmlns:boolexpimp="http://boolexpimp/" xmlns:ifstatement="http://ifstatement/" xmlns:sleepstatement="http://sleepstatement/" xmlns:simpleimp="http://simpleimp/">
+  <statements xsi:type="varexpimp:VarDecl" name="a">
+    <value xsi:type="boolexp:Tru" />
+  </statements>
+  <statements xsi:type="varexpimp:VarDecl" name="b">
+    <value xsi:type="boolexp:And">
+      <lhs xsi:type="boolexp:Tru" />
+      <rhs xsi:type="boolexp:Fals" />
+    </value>
+  </statements>
+  <statements xsi:type="ifstatement:If">
+    <condition xsi:type="boolexpimp:BoolExpCondition">
+      <exp xsi:type="varexpimp:VarRef" name="a"/>
+    </condition>
+    <thn>
+      <statements xsi:type="simpleimp:Print" msg="TrueBranch"/>
+    </thn>
+    <els>
+      <statements xsi:type="simpleimp:Print" msg="FalseBranch"/>
+    </els>
+  </statements>
+  <statements xsi:type="simpleimp:Whil">
+    <condition xsi:type="boolexpimp:BoolExpCondition">
+      <exp xsi:type="varexpimp:VarRef" name="b" />
+    </condition>
+    <body>
+      <statements xsi:type="simpleimp:Print" msg="Inside"/>
+      <statements xsi:type="sleepstatement:Sleep" duration="1000"/>
+    </body>
+  </statements>
+</simpleimp:Block>

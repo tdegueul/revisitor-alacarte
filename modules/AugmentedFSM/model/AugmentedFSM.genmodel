@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/AugmentedFSM/src/main/java" modelPluginID="AugmentedFSM"
+    modelName="AugmentedFSM" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="8.0" copyrightFields="false"
+    usedGenPackages="../../BoolExp/model/BoolExp.genmodel#//boolexp ../../FSM/model/FSM.genmodel#//fsm ../../SimpleIMP/model/SimpleIMP.genmodel#//simpleimp"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>AugmentedFSM.ecore</foreignModel>
+  <genPackages prefix="Augmentedfsm" disposableProviderFactory="true" ecorePackage="AugmentedFSM.ecore#/">
+    <genClasses ecoreClass="AugmentedFSM.ecore#//ExecutableState">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference AugmentedFSM.ecore#//ExecutableState/body"/>
+    </genClasses>
+    <genClasses ecoreClass="AugmentedFSM.ecore#//GuardedTransition">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference AugmentedFSM.ecore#//GuardedTransition/guard"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

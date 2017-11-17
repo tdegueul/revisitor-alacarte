@@ -9,6 +9,7 @@ import boolexp.Lit;
 import boolexp.Or;
 import boolexp.Tru;
 import boolexpimp.sem.eval.EvalBoolExpImp;
+import ifstatement.If;
 import simpleimp.Block;
 import simpleimp.Print;
 import simpleimp.Statement;
@@ -47,6 +48,8 @@ public interface EvalVarExpImp
 					block((Block) it).eval();
 				if (it instanceof Whil)
 					whil((Whil) it).eval();
+				if (it instanceof If)
+					iff((If) it).eval();
 				if (it instanceof Print)
 					print((Print) it).eval();
 				if (it instanceof Sleep)

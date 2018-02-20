@@ -5,9 +5,9 @@ import boolexp.Fals;
 import boolexp.Not;
 import boolexp.Or;
 import boolexp.Tru;
-import boolexp.revisitor.BoolExpRevisitor;
+import boolexp.revisitor.BoolExpRv;
 
-public interface PrintBoolExp extends BoolExpRevisitor<IPrint> {
+public interface PrintBoolExp extends BoolExpRv<IPrint> {
 	@Override
 	default IPrint tru(Tru it) {
 		return () -> "T";

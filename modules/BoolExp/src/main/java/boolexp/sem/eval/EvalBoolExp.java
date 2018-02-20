@@ -5,9 +5,9 @@ import boolexp.Fals;
 import boolexp.Not;
 import boolexp.Or;
 import boolexp.Tru;
-import boolexp.revisitor.BoolExpRevisitor;
+import boolexp.revisitor.BoolExpRv;
 
-public interface EvalBoolExp extends BoolExpRevisitor<IEval> {
+public interface EvalBoolExp extends BoolExpRv<IEval> {
 	@Override
 	default IEval tru(Tru it) {
 		return () -> true;

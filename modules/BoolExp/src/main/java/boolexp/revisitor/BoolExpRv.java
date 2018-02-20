@@ -9,7 +9,7 @@ import boolexp.Not;
 import boolexp.Or;
 import boolexp.Tru;
 
-public interface BoolExpRevisitor<E> {
+public interface BoolExpRv<E> {
 	E tru(Tru it);
 	E fals(Fals it);
 	E not(Not it);

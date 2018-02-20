@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel"
+    modelDirectory="/L2/src/main/java" modelPluginID="L2" modelName="L2"
+    rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" importerID="org.eclipse.emf.importer.ecore"
+    complianceLevel="8.0" copyrightFields="false" operationReflection="true" importOrganizing="true">
+  <foreignModel>L2.ecore</foreignModel>
+  <genPackages prefix="L2" disposableProviderFactory="true" ecorePackage="L2.ecore#/">
+    <genClasses ecoreClass="L2.ecore#//C"/>
+  </genPackages>
+</genmodel:GenModel>

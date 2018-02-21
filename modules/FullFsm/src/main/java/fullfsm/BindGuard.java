@@ -15,7 +15,7 @@ import boolexp.Exp;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link fullfsm.BindGuard#getBound <em>Bound</em>}</li>
+ *   <li>{@link fullfsm.BindGuard#getDelegate <em>Delegate</em>}</li>
  * </ul>
  *
  * @see fullfsm.FullfsmPackage#getBindGuard()
@@ -24,29 +24,29 @@ import boolexp.Exp;
  */
 public interface BindGuard extends Guard {
 	/**
-	 * Returns the value of the '<em><b>Bound</b></em>' containment reference.
+	 * Returns the value of the '<em><b>Delegate</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Bound</em>' containment reference isn't clear,
+	 * If the meaning of the '<em>Delegate</em>' containment reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Bound</em>' containment reference.
-	 * @see #setBound(Exp)
-	 * @see fullfsm.FullfsmPackage#getBindGuard_Bound()
+	 * @return the value of the '<em>Delegate</em>' containment reference.
+	 * @see #setDelegate(Exp)
+	 * @see fullfsm.FullfsmPackage#getBindGuard_Delegate()
 	 * @model containment="true"
 	 * @generated
 	 */
-	Exp getBound();
+	Exp getDelegate();
 
 	/**
-	 * Sets the value of the '{@link fullfsm.BindGuard#getBound <em>Bound</em>}' containment reference.
+	 * Sets the value of the '{@link fullfsm.BindGuard#getDelegate <em>Delegate</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Bound</em>' containment reference.
-	 * @see #getBound()
+	 * @param value the new value of the '<em>Delegate</em>' containment reference.
+	 * @see #getDelegate()
 	 * @generated
 	 */
-	void setBound(Exp value);
+	void setDelegate(Exp value);
 
 } // BindGuard

@@ -50,9 +50,9 @@ public class Main {
 		Exp e2 = expFact.createTru();
 		
 		BindGuard bg1 = ffsmFact.createBindGuard();
-		bg1.setBound(e1);
+		bg1.setDelegate(e1);
 		BindGuard bg2 = ffsmFact.createBindGuard();
-		bg2.setBound(e2);
+		bg2.setDelegate(e2);
 		
 		Block b1 = alFact.createBlock();
 		Print p1 = alFact.createPrint();
@@ -65,9 +65,9 @@ public class Main {
 		b2.getStmts().add(p2);
 		
 		BindAction ba1 = ffsmFact.createBindAction();
-		ba1.setBound(b1);
+		ba1.setDelegate(b1);
 		BindAction ba2 = ffsmFact.createBindAction();
-		ba2.setBound(b2);
+		ba2.setDelegate(b2);
 		
 		t1.setGuard(bg1);
 		t2.setGuard(bg2);

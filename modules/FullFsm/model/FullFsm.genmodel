@@ -8,10 +8,10 @@
   <foreignModel>FullFsm.ecore</foreignModel>
   <genPackages prefix="Fullfsm" disposableProviderFactory="true" ecorePackage="FullFsm.ecore#/">
     <genClasses ecoreClass="FullFsm.ecore#//BindGuard">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference FullFsm.ecore#//BindGuard/bound"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference FullFsm.ecore#//BindGuard/delegate"/>
     </genClasses>
     <genClasses ecoreClass="FullFsm.ecore#//BindAction">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference FullFsm.ecore#//BindAction/bound"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference FullFsm.ecore#//BindAction/delegate"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

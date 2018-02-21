@@ -2,11 +2,11 @@
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="fullfsm" nsURI="http://fullfsm/" nsPrefix="fullfsm">
   <eClassifiers xsi:type="ecore:EClass" name="BindGuard" eSuperTypes="../../BasicFsm/model/BasicFsm.ecore#//Guard">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="bound" eType="ecore:EClass ../../BoolExp/model/BoolExp.ecore#//Exp"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="delegate" eType="ecore:EClass ../../BoolExp/model/BoolExp.ecore#//Exp"
         containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="BindAction" eSuperTypes="../../BasicFsm/model/BasicFsm.ecore#//Action">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="bound" eType="ecore:EClass ../../SimpleAL/model/SimpleAL.ecore#//Block"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="delegate" eType="ecore:EClass ../../SimpleAL/model/SimpleAL.ecore#//Block"
         containment="true"/>
   </eClassifiers>
 </ecore:EPackage>

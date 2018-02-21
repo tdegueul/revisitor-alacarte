@@ -8,20 +8,26 @@ import fullfsm.revisitor.FullFsmRv;
 import simpleal.sem.print.PrintSimpleAL;
 
 public interface PrintFullFsm
-	extends FullFsmRv<basicfsm.sem.print.IPrint, basicfsm.sem.print.IPrint, basicfsm.sem.print.IPrint, basicfsm.sem.print.IPrint, basicfsm.sem.print.IPrint, basicfsm.sem.print.IPrint, boolexp.sem.print.IPrint, simpleal.sem.print.IPrint, simpleal.sem.print.IPrint, simpleal.sem.print.IPrint, basicfsm.sem.print.IPrint, basicfsm.sem.print.IPrint>,
-	        PrintBoolExp,
-	        PrintSimpleAL,
-	        PrintBasicFsm
+	extends FullFsmRv
+		<
+			basicfsm.sem.print.IPrint, basicfsm.sem.print.IPrint, basicfsm.sem.print.IPrint, basicfsm.sem.print.IPrint, basicfsm.sem.print.IPrint, basicfsm.sem.print.IPrint,
+			boolexp.sem.print.IPrint,
+			simpleal.sem.print.IPrint, simpleal.sem.print.IPrint, simpleal.sem.print.IPrint,
+			basicfsm.sem.print.IPrint, basicfsm.sem.print.IPrint
+		>,
+		PrintBoolExp,
+		PrintSimpleAL,
+		PrintBasicFsm
 {
-
 	@Override
 	default basicfsm.sem.print.IPrint bindAction(BindAction it) {
-		return () -> $(it.getBound()).print();
+		// BindAction's semantics <=> its delegate's semantics
+		return () -> $(it.getDelegate()).print();
 	}
 	
 	@Override
 	default basicfsm.sem.print.IPrint bindGuard(BindGuard it) {
-		return () -> $(it.getBound()).print();
+		// BindGuard's semantics <=> its delegate's semantics
+		return () -> $(it.getDelegate()).print();
 	}
-	
 }

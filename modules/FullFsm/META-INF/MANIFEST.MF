@@ -12,7 +12,7 @@ Export-Package: fullfsm,
  fullfsm.util
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport,
- BasicFsm;bundle-version="1.0.0",
- BoolExp;bundle-version="1.0.0",
- SimpleAL;bundle-version="1.0.0"
+ BasicFsm;bundle-version="1.0.0";visibility:=reexport,
+ BoolExp;bundle-version="1.0.0";visibility:=reexport,
+ SimpleAL;bundle-version="1.0.0";visibility:=reexport
 Bundle-ActivationPolicy: lazy

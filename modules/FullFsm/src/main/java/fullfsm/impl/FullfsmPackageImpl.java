@@ -120,7 +120,7 @@ public class FullfsmPackageImpl extends EPackageImpl implements FullfsmPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getBindGuard_Bound() {
+	public EReference getBindGuard_Delegate() {
 		return (EReference)bindGuardEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -138,7 +138,7 @@ public class FullfsmPackageImpl extends EPackageImpl implements FullfsmPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getBindAction_Bound() {
+	public EReference getBindAction_Delegate() {
 		return (EReference)bindActionEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -171,10 +171,10 @@ public class FullfsmPackageImpl extends EPackageImpl implements FullfsmPackage {
 
 		// Create classes and their features
 		bindGuardEClass = createEClass(BIND_GUARD);
-		createEReference(bindGuardEClass, BIND_GUARD__BOUND);
+		createEReference(bindGuardEClass, BIND_GUARD__DELEGATE);
 
 		bindActionEClass = createEClass(BIND_ACTION);
-		createEReference(bindActionEClass, BIND_ACTION__BOUND);
+		createEReference(bindActionEClass, BIND_ACTION__DELEGATE);
 	}
 
 	/**
@@ -215,10 +215,10 @@ public class FullfsmPackageImpl extends EPackageImpl implements FullfsmPackage {
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(bindGuardEClass, BindGuard.class, "BindGuard", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getBindGuard_Bound(), theBoolexpPackage.getExp(), null, "bound", null, 0, 1, BindGuard.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getBindGuard_Delegate(), theBoolexpPackage.getExp(), null, "delegate", null, 0, 1, BindGuard.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(bindActionEClass, BindAction.class, "BindAction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getBindAction_Bound(), theSimplealPackage.getBlock(), null, "bound", null, 0, 1, BindAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getBindAction_Delegate(), theSimplealPackage.getBlock(), null, "delegate", null, 0, 1, BindAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);

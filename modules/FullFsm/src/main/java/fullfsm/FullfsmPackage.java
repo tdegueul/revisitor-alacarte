@@ -68,13 +68,13 @@ public interface FullfsmPackage extends EPackage {
 	int BIND_GUARD = 0;
 
 	/**
-	 * The feature id for the '<em><b>Bound</b></em>' containment reference.
+	 * The feature id for the '<em><b>Delegate</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BIND_GUARD__BOUND = BasicfsmPackage.GUARD_FEATURE_COUNT + 0;
+	int BIND_GUARD__DELEGATE = BasicfsmPackage.GUARD_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Bind Guard</em>' class.
@@ -105,13 +105,13 @@ public interface FullfsmPackage extends EPackage {
 	int BIND_ACTION = 1;
 
 	/**
-	 * The feature id for the '<em><b>Bound</b></em>' containment reference.
+	 * The feature id for the '<em><b>Delegate</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BIND_ACTION__BOUND = BasicfsmPackage.ACTION_FEATURE_COUNT + 0;
+	int BIND_ACTION__DELEGATE = BasicfsmPackage.ACTION_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Bind Action</em>' class.
@@ -143,15 +143,15 @@ public interface FullfsmPackage extends EPackage {
 	EClass getBindGuard();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link fullfsm.BindGuard#getBound <em>Bound</em>}'.
+	 * Returns the meta object for the containment reference '{@link fullfsm.BindGuard#getDelegate <em>Delegate</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Bound</em>'.
-	 * @see fullfsm.BindGuard#getBound()
+	 * @return the meta object for the containment reference '<em>Delegate</em>'.
+	 * @see fullfsm.BindGuard#getDelegate()
 	 * @see #getBindGuard()
 	 * @generated
 	 */
-	EReference getBindGuard_Bound();
+	EReference getBindGuard_Delegate();
 
 	/**
 	 * Returns the meta object for class '{@link fullfsm.BindAction <em>Bind Action</em>}'.
@@ -164,15 +164,15 @@ public interface FullfsmPackage extends EPackage {
 	EClass getBindAction();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link fullfsm.BindAction#getBound <em>Bound</em>}'.
+	 * Returns the meta object for the containment reference '{@link fullfsm.BindAction#getDelegate <em>Delegate</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Bound</em>'.
-	 * @see fullfsm.BindAction#getBound()
+	 * @return the meta object for the containment reference '<em>Delegate</em>'.
+	 * @see fullfsm.BindAction#getDelegate()
 	 * @see #getBindAction()
 	 * @generated
 	 */
-	EReference getBindAction_Bound();
+	EReference getBindAction_Delegate();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -208,12 +208,12 @@ public interface FullfsmPackage extends EPackage {
 		EClass BIND_GUARD = eINSTANCE.getBindGuard();
 
 		/**
-		 * The meta object literal for the '<em><b>Bound</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>Delegate</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference BIND_GUARD__BOUND = eINSTANCE.getBindGuard_Bound();
+		EReference BIND_GUARD__DELEGATE = eINSTANCE.getBindGuard_Delegate();
 
 		/**
 		 * The meta object literal for the '{@link fullfsm.impl.BindActionImpl <em>Bind Action</em>}' class.
@@ -226,12 +226,12 @@ public interface FullfsmPackage extends EPackage {
 		EClass BIND_ACTION = eINSTANCE.getBindAction();
 
 		/**
-		 * The meta object literal for the '<em><b>Bound</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>Delegate</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference BIND_ACTION__BOUND = eINSTANCE.getBindAction_Bound();
+		EReference BIND_ACTION__DELEGATE = eINSTANCE.getBindAction_Delegate();
 
 	}
 

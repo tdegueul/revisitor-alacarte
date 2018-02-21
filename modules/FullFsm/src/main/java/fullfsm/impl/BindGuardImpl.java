@@ -24,22 +24,21 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link fullfsm.impl.BindGuardImpl#getBound <em>Bound</em>}</li>
+ *   <li>{@link fullfsm.impl.BindGuardImpl#getDelegate <em>Delegate</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class BindGuardImpl extends MinimalEObjectImpl.Container implements BindGuard {
 	/**
-	 * The cached value of the '{@link #getBound() <em>Bound</em>}' containment reference.
+	 * The cached value of the '{@link #getDelegate() <em>Delegate</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getBound()
+	 * @see #getDelegate()
 	 * @generated
 	 * @ordered
 	 */
-	protected Exp bound;
-
+	protected Exp delegate;
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -64,8 +63,8 @@ public class BindGuardImpl extends MinimalEObjectImpl.Container implements BindG
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Exp getBound() {
-		return bound;
+	public Exp getDelegate() {
+		return delegate;
 	}
 
 	/**
@@ -73,11 +72,11 @@ public class BindGuardImpl extends MinimalEObjectImpl.Container implements BindG
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetBound(Exp newBound, NotificationChain msgs) {
-		Exp oldBound = bound;
-		bound = newBound;
+	public NotificationChain basicSetDelegate(Exp newDelegate, NotificationChain msgs) {
+		Exp oldDelegate = delegate;
+		delegate = newDelegate;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, FullfsmPackage.BIND_GUARD__BOUND, oldBound, newBound);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, FullfsmPackage.BIND_GUARD__DELEGATE, oldDelegate, newDelegate);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -88,18 +87,18 @@ public class BindGuardImpl extends MinimalEObjectImpl.Container implements BindG
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setBound(Exp newBound) {
-		if (newBound != bound) {
+	public void setDelegate(Exp newDelegate) {
+		if (newDelegate != delegate) {
 			NotificationChain msgs = null;
-			if (bound != null)
-				msgs = ((InternalEObject)bound).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - FullfsmPackage.BIND_GUARD__BOUND, null, msgs);
-			if (newBound != null)
-				msgs = ((InternalEObject)newBound).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - FullfsmPackage.BIND_GUARD__BOUND, null, msgs);
-			msgs = basicSetBound(newBound, msgs);
+			if (delegate != null)
+				msgs = ((InternalEObject)delegate).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - FullfsmPackage.BIND_GUARD__DELEGATE, null, msgs);
+			if (newDelegate != null)
+				msgs = ((InternalEObject)newDelegate).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - FullfsmPackage.BIND_GUARD__DELEGATE, null, msgs);
+			msgs = basicSetDelegate(newDelegate, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, FullfsmPackage.BIND_GUARD__BOUND, newBound, newBound));
+			eNotify(new ENotificationImpl(this, Notification.SET, FullfsmPackage.BIND_GUARD__DELEGATE, newDelegate, newDelegate));
 	}
 
 	/**
@@ -110,8 +109,8 @@ public class BindGuardImpl extends MinimalEObjectImpl.Container implements BindG
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case FullfsmPackage.BIND_GUARD__BOUND:
-				return basicSetBound(null, msgs);
+			case FullfsmPackage.BIND_GUARD__DELEGATE:
+				return basicSetDelegate(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -124,8 +123,8 @@ public class BindGuardImpl extends MinimalEObjectImpl.Container implements BindG
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case FullfsmPackage.BIND_GUARD__BOUND:
-				return getBound();
+			case FullfsmPackage.BIND_GUARD__DELEGATE:
+				return getDelegate();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -138,8 +137,8 @@ public class BindGuardImpl extends MinimalEObjectImpl.Container implements BindG
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case FullfsmPackage.BIND_GUARD__BOUND:
-				setBound((Exp)newValue);
+			case FullfsmPackage.BIND_GUARD__DELEGATE:
+				setDelegate((Exp)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -153,8 +152,8 @@ public class BindGuardImpl extends MinimalEObjectImpl.Container implements BindG
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case FullfsmPackage.BIND_GUARD__BOUND:
-				setBound((Exp)null);
+			case FullfsmPackage.BIND_GUARD__DELEGATE:
+				setDelegate((Exp)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -168,8 +167,8 @@ public class BindGuardImpl extends MinimalEObjectImpl.Container implements BindG
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case FullfsmPackage.BIND_GUARD__BOUND:
-				return bound != null;
+			case FullfsmPackage.BIND_GUARD__DELEGATE:
+				return delegate != null;
 		}
 		return super.eIsSet(featureID);
 	}

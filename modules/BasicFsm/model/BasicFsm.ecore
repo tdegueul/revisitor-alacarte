@@ -17,8 +17,10 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Trans">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="event" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EChar"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="src" eType="#//State" eOpposite="#//State/out"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="tgt" eType="#//State" eOpposite="#//State/in"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="src" lowerBound="1" eType="#//State"
+        eOpposite="#//State/out"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="tgt" lowerBound="1" eType="#//State"
+        eOpposite="#//State/in"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="guard" eType="#//Guard"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="action" eType="#//Action"

@@ -15,9 +15,9 @@ public interface PrintFullFsm
 			simpleal.sem.print.IPrint, simpleal.sem.print.IPrint, simpleal.sem.print.IPrint,
 			basicfsm.sem.print.IPrint, basicfsm.sem.print.IPrint
 		>,
+		PrintBasicFsm,
 		PrintBoolExp,
-		PrintSimpleAL,
-		PrintBasicFsm
+		PrintSimpleAL
 {
 	@Override
 	default basicfsm.sem.print.IPrint bindAction(BindAction it) {

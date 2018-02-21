@@ -17,15 +17,15 @@ import simpleal.revisitor.SimpleALRv;
  */
 public interface FullFsmRv
 	<
-		M, S, T, I extends S, A, G, // From BasicFsm
-		E,                          // From BoolExp
-		B, ST, P extends ST,        // From SimpleAL
-		BA extends A, BG extends G  // Bindings
+		M, S, T, I extends S, A, G, VD,                    // From BasicFsm
+		E,                                                 // From BoolExp
+		B, ST, P extends ST, PV extends ST, BI extends ST, // From SimpleAL
+		BA extends A, BG extends G                         // Bindings
 	>
 	extends
-		BasicFsmRv<M, S, T, I, A, G>,
+		BasicFsmRv<M, S, T, I, A, G, VD>,
 		BoolExpRv<E>,
-		SimpleALRv<B, ST, P>
+		SimpleALRv<B, ST, P, PV, BI>
 {
 	BA bindAction(BindAction it);
 	BG bindGuard(BindGuard it);

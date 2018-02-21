@@ -8,7 +8,7 @@ import basicfsm.State;
 import basicfsm.Trans;
 import basicfsm.revisitor.BasicFsmRv;
 
-public interface EvalFsm
+public interface EvalBasicFsm
   extends BasicFsmRv<IExecMachine, IStepState, IFireTransition, IStepState, IRunAction, IEvalGuard> {
 	@Override
 	default IExecMachine machine(Machine it) {

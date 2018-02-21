@@ -10,6 +10,7 @@ Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Export-Package: simpleal,
  simpleal.impl,
  simpleal.revisitor,
+ simpleal.sem.eval,
  simpleal.sem.print,
  simpleal.util
 Require-Bundle: org.eclipse.core.runtime,

@@ -1,14 +1,18 @@
 package fullfsm.main;
 
+import java.util.stream.Collectors;
+
 import basicfsm.BasicfsmFactory;
 import basicfsm.Machine;
 import basicfsm.State;
 import basicfsm.Trans;
+import basicfsm.sem.eval.Context;
 import boolexp.BoolexpFactory;
 import boolexp.Exp;
 import fullfsm.BindAction;
 import fullfsm.BindGuard;
 import fullfsm.FullfsmFactory;
+import fullfsm.sem.eval.EvalFullFsm;
 import fullfsm.sem.print.PrintFullFsm;
 import simpleal.Block;
 import simpleal.Print;
@@ -18,8 +22,19 @@ public class Main {
 	public static void main(String[] args) {
 		Machine m = createModel();
 		PrintFullFsm printSem = new PrintFullFsm(){};
+		EvalFullFsm evalSem = new EvalFullFsm(){};
 		
+		System.out.println("Print:");
 		System.out.println(printSem.$(m).print());
+		
+		System.out.println("Eval:");
+		Context ctx = new Context();
+		String[] events = {"a", "b", "a", "b"};
+		evalSem.$(m).exec(events, ctx);
+		System.out.println("Trace: " +
+				ctx.getTrace().stream()
+				.map(s -> s.getName())
+				.collect(Collectors.joining(" -> ")));
 	}
 	
 	public static Machine createModel() {

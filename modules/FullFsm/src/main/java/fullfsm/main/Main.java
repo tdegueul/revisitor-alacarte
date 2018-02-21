@@ -9,6 +9,7 @@ import basicfsm.Trans;
 import basicfsm.sem.eval.Context;
 import boolexp.BoolexpFactory;
 import boolexp.Exp;
+import boolexp.Not;
 import fullfsm.BindAction;
 import fullfsm.BindGuard;
 import fullfsm.FullfsmFactory;
@@ -62,7 +63,8 @@ public class Main {
 		t2.setTgt(s1);
 		
 		Exp e1 = expFact.createTru();
-		Exp e2 = expFact.createTru();
+		Not e2 = expFact.createNot();
+		e2.setExp(expFact.createFals());
 		
 		BindGuard bg1 = ffsmFact.createBindGuard();
 		bg1.setDelegate(e1);

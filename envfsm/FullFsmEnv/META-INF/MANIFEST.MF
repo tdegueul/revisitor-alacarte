@@ -1,7 +1,7 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
-Bundle-SymbolicName: FullFsm;singleton:=true
+Bundle-SymbolicName: FullFsmEnv;singleton:=true
 Bundle-Version: 1.0.0.qualifier
 Bundle-ClassPath: .
 Bundle-Vendor: %providerName
@@ -12,7 +12,7 @@ Export-Package: fullfsm,
  fullfsm.util
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport,
- BasicFsm;bundle-version="1.0.0";visibility:=reexport,
- BoolExp;bundle-version="1.0.0";visibility:=reexport,
- SimpleAL;bundle-version="1.0.0";visibility:=reexport
+ BasicFsmEnv;bundle-version="1.0.0";visibility:=reexport,
+ BoolExpEnv;bundle-version="1.0.0";visibility:=reexport,
+ SimpleALEnv;bundle-version="1.0.0";visibility:=reexport
 Bundle-ActivationPolicy: lazy

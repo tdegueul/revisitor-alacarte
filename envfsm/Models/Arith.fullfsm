@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<basicfsm:Machine xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:basicfsm="http://basicfsm/"
+	xmlns:boolexp="http://boolexp/"
+	xmlns:simpleal="http://simpleal/"
+	xmlns:fullfsm="http://fullfsm/">
+  <states xsi:type="basicfsm:InitialState" name="s1" in="//@trans.1" out="//@trans.0"/>
+  <states name="s2" in="//@trans.0 //@trans.2" out="//@trans.1 //@trans.2"/>
+  <trans event="a" src="//@states.0" tgt="//@states.1">
+    <guard xsi:type="fullfsm:BindGuard">
+      <delegate xsi:type="boolexp:Or">
+        <lhs xsi:type="boolexp:VarRef" name="x"/>
+        <rhs xsi:type="boolexp:Tru"/>
+      </delegate>
+    </guard>
+    <action xsi:type="fullfsm:BindAction">
+      <delegate xsi:type="simpleal:Block">
+        <stmts xsi:type="simpleal:Assign" name="i">
+          <val xsi:type="simpleal:ArithPlus">
+            <lhs xsi:type="simpleal:VarRef" name="i"/>
+            <rhs xsi:type="simpleal:ArithLit" val="1"/>
+          </val>
+        </stmts>
+      </delegate>
+    </action>
+  </trans>
+  <trans event="b" src="//@states.1" tgt="//@states.0">
+    <guard xsi:type="fullfsm:BindGuard">
+      <delegate xsi:type="boolexp:Or">
+        <lhs xsi:type="boolexp:VarRef" name="y"/>
+        <rhs xsi:type="boolexp:Fals"/>
+      </delegate>
+    </guard>
+    <action xsi:type="fullfsm:BindAction">
+      <delegate xsi:type="simpleal:Block">
+        <stmts xsi:type="simpleal:Print" name="i"/>
+      </delegate>
+    </action>
+  </trans>
+  <trans event="c" src="//@states.1" tgt="//@states.1">
+    <guard xsi:type="fullfsm:BindGuard">
+      <delegate xsi:type="boolexp:Tru"/>
+    </guard>
+    <action xsi:type="fullfsm:BindAction">
+      <delegate xsi:type="simpleal:Block">
+        <stmts xsi:type="simpleal:Assign" name="i">
+          <val xsi:type="simpleal:ArithLit" val="0"/>
+        </stmts>
+      </delegate>
+    </action>
+  </trans>
+</basicfsm:Machine>

@@ -2,6 +2,13 @@ package fullfsm.main;
 
 import java.util.stream.Collectors;
 
+import org.eclipse.emf.common.util.URI;
+import org.eclipse.emf.ecore.EPackage;
+import org.eclipse.emf.ecore.resource.Resource;
+import org.eclipse.emf.ecore.resource.ResourceSet;
+import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
+import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl;
+
 import basicfsm.BasicfsmFactory;
 import basicfsm.Machine;
 import basicfsm.State;
@@ -15,6 +22,7 @@ import boolexp.VarRef;
 import fullfsm.BindAction;
 import fullfsm.BindGuard;
 import fullfsm.FullfsmFactory;
+import fullfsm.FullfsmPackage;
 import fullfsm.sem.eval.EvalFullFsm;
 import fullfsm.sem.print.PrintFullFsm;
 import simpleal.ArithLit;
@@ -26,7 +34,8 @@ import simpleal.SimplealFactory;
 
 public class Main {
 	public static void main(String[] args) {
-		Machine m = createModel();
+//		Machine m = createModel();
+		Machine m = loadArithModel();
 		PrintFullFsm printSem = new PrintFullFsm(){};
 		EvalFullFsm evalSem = new EvalFullFsm(){};
 		
@@ -37,14 +46,24 @@ public class Main {
 		Context ctx = new Context();
 		ctx.bind("x", true);
 		ctx.bind("y", true);
-		ctx.bind("i", 1);
-		ctx.bind("j", 1);
-		String[] events = {"a", "b", "a", "c", "b", "a", "c", "b", "a"};
+		ctx.bind("i", 0);
+		ctx.bind("j", 0);
+		String[] events = {"a", "b", "a", "b", "a", "b", "a", "b", "a", "c", "b", "a", "b"};
 		evalSem.$(m).exec(events, ctx);
 		System.out.println("Trace: " +
 				ctx.getTrace().stream()
 				.map(s -> s.getName())
 				.collect(Collectors.joining(" -> ")));
+	}
+	
+	public static Machine loadArithModel() {
+		Resource.Factory.Registry.INSTANCE.getExtensionToFactoryMap().put(
+				"fullfsm", new XMIResourceFactoryImpl());
+		EPackage.Registry.INSTANCE.put(
+				FullfsmPackage.eNS_URI, FullfsmPackage.eINSTANCE);
+		ResourceSet rs = new ResourceSetImpl();
+		Resource res = rs.getResource(URI.createURI("../Models/Arith.fullfsm"), true);
+		return (Machine) res.getContents().get(0);
 	}
 	
 	public static Machine createModel() {

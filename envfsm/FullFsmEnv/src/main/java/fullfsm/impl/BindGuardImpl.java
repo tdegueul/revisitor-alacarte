@@ -39,6 +39,7 @@ public class BindGuardImpl extends MinimalEObjectImpl.Container implements BindG
 	 * @ordered
 	 */
 	protected Exp delegate;
+
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

@@ -343,7 +343,6 @@ public interface BoolexpPackage extends EPackage {
 	 */
 	int OR_OPERATION_COUNT = BIN_EXP_OPERATION_COUNT + 0;
 
-
 	/**
 	 * The meta object id for the '{@link boolexp.impl.VarRefImpl <em>Var Ref</em>}' class.
 	 * <!-- begin-user-doc -->
@@ -380,6 +379,7 @@ public interface BoolexpPackage extends EPackage {
 	 * @ordered
 	 */
 	int VAR_REF_OPERATION_COUNT = EXP_OPERATION_COUNT + 0;
+
 
 	/**
 	 * Returns the meta object for class '{@link boolexp.Exp <em>Exp</em>}'.

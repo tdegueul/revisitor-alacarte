@@ -31,6 +31,42 @@ public interface SimplealFactory extends EFactory {
 	Block createBlock();
 
 	/**
+	 * Returns a new object of class '<em>Var Ref</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Var Ref</em>'.
+	 * @generated
+	 */
+	VarRef createVarRef();
+
+	/**
+	 * Returns a new object of class '<em>Arith Lit</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Arith Lit</em>'.
+	 * @generated
+	 */
+	ArithLit createArithLit();
+
+	/**
+	 * Returns a new object of class '<em>Arith Plus</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Arith Plus</em>'.
+	 * @generated
+	 */
+	ArithPlus createArithPlus();
+
+	/**
+	 * Returns a new object of class '<em>Arith Minus</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Arith Minus</em>'.
+	 * @generated
+	 */
+	ArithMinus createArithMinus();
+
+	/**
 	 * Returns a new object of class '<em>Print</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -40,22 +76,13 @@ public interface SimplealFactory extends EFactory {
 	Print createPrint();
 
 	/**
-	 * Returns a new object of class '<em>Print Var</em>'.
+	 * Returns a new object of class '<em>Assign</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Print Var</em>'.
+	 * @return a new object of class '<em>Assign</em>'.
 	 * @generated
 	 */
-	PrintVar createPrintVar();
-
-	/**
-	 * Returns a new object of class '<em>Bind</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Bind</em>'.
-	 * @generated
-	 */
-	Bind createBind();
+	Assign createAssign();
 
 	/**
 	 * Returns the package supported by this factory.

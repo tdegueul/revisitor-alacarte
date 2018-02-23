@@ -5,21 +5,21 @@ package simpleal;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Print</b></em>'.
+ * A representation of the model object '<em><b>Var Ref</b></em>'.
  * <!-- end-user-doc -->
  *
  * <p>
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link simpleal.Print#getName <em>Name</em>}</li>
+ *   <li>{@link simpleal.VarRef#getName <em>Name</em>}</li>
  * </ul>
  *
- * @see simpleal.SimplealPackage#getPrint()
+ * @see simpleal.SimplealPackage#getVarRef()
  * @model
  * @generated
  */
-public interface Print extends Stmt {
+public interface VarRef extends Arith {
 	/**
 	 * Returns the value of the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
@@ -30,14 +30,14 @@ public interface Print extends Stmt {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Name</em>' attribute.
 	 * @see #setName(String)
-	 * @see simpleal.SimplealPackage#getPrint_Name()
+	 * @see simpleal.SimplealPackage#getVarRef_Name()
 	 * @model
 	 * @generated
 	 */
 	String getName();
 
 	/**
-	 * Sets the value of the '{@link simpleal.Print#getName <em>Name</em>}' attribute.
+	 * Sets the value of the '{@link simpleal.VarRef#getName <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Name</em>' attribute.
@@ -46,4 +46,4 @@ public interface Print extends Stmt {
 	 */
 	void setName(String value);
 
-} // Print
+} // VarRef

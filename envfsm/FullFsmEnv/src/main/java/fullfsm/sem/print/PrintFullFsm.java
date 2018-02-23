@@ -12,7 +12,7 @@ public interface PrintFullFsm
 		<
 			basicfsm.sem.print.IPrint, basicfsm.sem.print.IPrint, basicfsm.sem.print.IPrint, basicfsm.sem.print.IPrint, basicfsm.sem.print.IPrint, basicfsm.sem.print.IPrint, basicfsm.sem.print.IPrint,
 			boolexp.sem.print.IPrint,
-			simpleal.sem.print.IPrint, simpleal.sem.print.IPrint, simpleal.sem.print.IPrint, simpleal.sem.print.IPrint, simpleal.sem.print.IPrint,
+			simpleal.sem.print.IPrint, simpleal.sem.print.IPrint, simpleal.sem.print.IPrint, simpleal.sem.print.IPrint, simpleal.sem.print.IPrint, simpleal.sem.print.IPrint, simpleal.sem.print.IPrint, simpleal.sem.print.IPrint, simpleal.sem.print.IPrint, simpleal.sem.print.IPrint,
 			basicfsm.sem.print.IPrint, basicfsm.sem.print.IPrint
 		>,
 		PrintBasicFsm,

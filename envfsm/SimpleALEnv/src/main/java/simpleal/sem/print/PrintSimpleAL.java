@@ -2,13 +2,16 @@ package simpleal.sem.print;
 
 import java.util.stream.Collectors;
 
-import simpleal.Bind;
+import simpleal.ArithLit;
+import simpleal.ArithMinus;
+import simpleal.ArithPlus;
+import simpleal.Assign;
 import simpleal.Block;
 import simpleal.Print;
-import simpleal.PrintVar;
+import simpleal.VarRef;
 import simpleal.revisitor.SimpleALRv;
 
-public interface PrintSimpleAL extends SimpleALRv<IPrint, IPrint, IPrint, IPrint, IPrint> {
+public interface PrintSimpleAL extends SimpleALRv<IPrint, IPrint, IPrint, IPrint, IPrint, IPrint, IPrint, IPrint, IPrint, IPrint> {
 	@Override
 	default IPrint block(Block it) {
 		return () ->
@@ -16,19 +19,34 @@ public interface PrintSimpleAL extends SimpleALRv<IPrint, IPrint, IPrint, IPrint
 			.map(s -> $(s).print())
 			.collect(Collectors.joining(System.lineSeparator()));
 	}
+	
+	@Override
+	default IPrint varRef(VarRef it) {
+		return () -> it.getName();
+	}
+	
+	@Override
+	default IPrint arithLit(ArithLit it) {
+		return () -> Integer.toString(it.getVal());
+	}
+	
+	@Override
+	default IPrint arithPlus(ArithPlus it) {
+		return () -> $(it.getLhs()).print() + " + " + $(it.getRhs()).print();
+	}
+	
+	@Override
+	default IPrint arithMinus(ArithMinus it) {
+		return () -> $(it.getLhs()).print() + " - " + $(it.getRhs()).print();
+	}
 
 	@Override
 	default IPrint print(Print it) {
-		return () -> "print(\"" + it.getMsg() + "\")";
+		return () -> "print(" + it.getName() + ")";
 	}
 	
 	@Override
-	default IPrint printVar(PrintVar it) {
-		return () -> "print(" + it.getVarName() + ")";
-	}
-	
-	@Override
-	default IPrint bind(Bind it) {
-		return () -> it.getName() + " := \"" + it.getVal() + "\"";
+	default IPrint assign(Assign it) {
+		return () -> it.getName() + " := " + $(it.getVal()).print();
 	}
 }

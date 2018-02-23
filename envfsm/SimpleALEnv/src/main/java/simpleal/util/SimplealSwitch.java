@@ -78,6 +78,49 @@ public class SimplealSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case SimplealPackage.ARITH: {
+				Arith arith = (Arith)theEObject;
+				T result = caseArith(arith);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case SimplealPackage.VAR_REF: {
+				VarRef varRef = (VarRef)theEObject;
+				T result = caseVarRef(varRef);
+				if (result == null) result = caseArith(varRef);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case SimplealPackage.ARITH_LIT: {
+				ArithLit arithLit = (ArithLit)theEObject;
+				T result = caseArithLit(arithLit);
+				if (result == null) result = caseArith(arithLit);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case SimplealPackage.ARITH_OP: {
+				ArithOp arithOp = (ArithOp)theEObject;
+				T result = caseArithOp(arithOp);
+				if (result == null) result = caseArith(arithOp);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case SimplealPackage.ARITH_PLUS: {
+				ArithPlus arithPlus = (ArithPlus)theEObject;
+				T result = caseArithPlus(arithPlus);
+				if (result == null) result = caseArithOp(arithPlus);
+				if (result == null) result = caseArith(arithPlus);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case SimplealPackage.ARITH_MINUS: {
+				ArithMinus arithMinus = (ArithMinus)theEObject;
+				T result = caseArithMinus(arithMinus);
+				if (result == null) result = caseArithOp(arithMinus);
+				if (result == null) result = caseArith(arithMinus);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case SimplealPackage.PRINT: {
 				Print print = (Print)theEObject;
 				T result = casePrint(print);
@@ -85,17 +128,10 @@ public class SimplealSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case SimplealPackage.PRINT_VAR: {
-				PrintVar printVar = (PrintVar)theEObject;
-				T result = casePrintVar(printVar);
-				if (result == null) result = caseStmt(printVar);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case SimplealPackage.BIND: {
-				Bind bind = (Bind)theEObject;
-				T result = caseBind(bind);
-				if (result == null) result = caseStmt(bind);
+			case SimplealPackage.ASSIGN: {
+				Assign assign = (Assign)theEObject;
+				T result = caseAssign(assign);
+				if (result == null) result = caseStmt(assign);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -134,6 +170,96 @@ public class SimplealSwitch<T> extends Switch<T> {
 	}
 
 	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Arith</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Arith</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseArith(Arith object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Var Ref</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Var Ref</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseVarRef(VarRef object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Arith Lit</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Arith Lit</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseArithLit(ArithLit object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Arith Op</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Arith Op</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseArithOp(ArithOp object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Arith Plus</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Arith Plus</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseArithPlus(ArithPlus object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Arith Minus</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Arith Minus</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseArithMinus(ArithMinus object) {
+		return null;
+	}
+
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Print</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -149,32 +275,17 @@ public class SimplealSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Print Var</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Assign</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Print Var</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Assign</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T casePrintVar(PrintVar object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Bind</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Bind</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseBind(Bind object) {
+	public T caseAssign(Assign object) {
 		return null;
 	}
 

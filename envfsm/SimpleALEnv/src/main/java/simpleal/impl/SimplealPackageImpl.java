@@ -9,13 +9,18 @@ import org.eclipse.emf.ecore.EReference;
 
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
-import simpleal.Bind;
+import simpleal.Arith;
+import simpleal.ArithLit;
+import simpleal.ArithMinus;
+import simpleal.ArithOp;
+import simpleal.ArithPlus;
+import simpleal.Assign;
 import simpleal.Block;
 import simpleal.Print;
-import simpleal.PrintVar;
 import simpleal.SimplealFactory;
 import simpleal.SimplealPackage;
 import simpleal.Stmt;
+import simpleal.VarRef;
 
 /**
  * <!-- begin-user-doc -->
@@ -43,6 +48,48 @@ public class SimplealPackageImpl extends EPackageImpl implements SimplealPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EClass arithEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass varRefEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass arithLitEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass arithOpEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass arithPlusEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass arithMinusEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EClass printEClass = null;
 
 	/**
@@ -50,14 +97,7 @@ public class SimplealPackageImpl extends EPackageImpl implements SimplealPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass printVarEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass bindEClass = null;
+	private EClass assignEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -152,6 +192,96 @@ public class SimplealPackageImpl extends EPackageImpl implements SimplealPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getArith() {
+		return arithEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getVarRef() {
+		return varRefEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getVarRef_Name() {
+		return (EAttribute)varRefEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getArithLit() {
+		return arithLitEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getArithLit_Val() {
+		return (EAttribute)arithLitEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getArithOp() {
+		return arithOpEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getArithOp_Lhs() {
+		return (EReference)arithOpEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getArithOp_Rhs() {
+		return (EReference)arithOpEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getArithPlus() {
+		return arithPlusEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getArithMinus() {
+		return arithMinusEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getPrint() {
 		return printEClass;
 	}
@@ -161,7 +291,7 @@ public class SimplealPackageImpl extends EPackageImpl implements SimplealPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getPrint_Msg() {
+	public EAttribute getPrint_Name() {
 		return (EAttribute)printEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -170,8 +300,8 @@ public class SimplealPackageImpl extends EPackageImpl implements SimplealPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getPrintVar() {
-		return printVarEClass;
+	public EClass getAssign() {
+		return assignEClass;
 	}
 
 	/**
@@ -179,8 +309,8 @@ public class SimplealPackageImpl extends EPackageImpl implements SimplealPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getPrintVar_VarName() {
-		return (EAttribute)printVarEClass.getEStructuralFeatures().get(0);
+	public EAttribute getAssign_Name() {
+		return (EAttribute)assignEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -188,26 +318,8 @@ public class SimplealPackageImpl extends EPackageImpl implements SimplealPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getBind() {
-		return bindEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getBind_Name() {
-		return (EAttribute)bindEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getBind_Val() {
-		return (EAttribute)bindEClass.getEStructuralFeatures().get(1);
+	public EReference getAssign_Val() {
+		return (EReference)assignEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -243,15 +355,28 @@ public class SimplealPackageImpl extends EPackageImpl implements SimplealPackage
 
 		stmtEClass = createEClass(STMT);
 
+		arithEClass = createEClass(ARITH);
+
+		varRefEClass = createEClass(VAR_REF);
+		createEAttribute(varRefEClass, VAR_REF__NAME);
+
+		arithLitEClass = createEClass(ARITH_LIT);
+		createEAttribute(arithLitEClass, ARITH_LIT__VAL);
+
+		arithOpEClass = createEClass(ARITH_OP);
+		createEReference(arithOpEClass, ARITH_OP__LHS);
+		createEReference(arithOpEClass, ARITH_OP__RHS);
+
+		arithPlusEClass = createEClass(ARITH_PLUS);
+
+		arithMinusEClass = createEClass(ARITH_MINUS);
+
 		printEClass = createEClass(PRINT);
-		createEAttribute(printEClass, PRINT__MSG);
+		createEAttribute(printEClass, PRINT__NAME);
 
-		printVarEClass = createEClass(PRINT_VAR);
-		createEAttribute(printVarEClass, PRINT_VAR__VAR_NAME);
-
-		bindEClass = createEClass(BIND);
-		createEAttribute(bindEClass, BIND__NAME);
-		createEAttribute(bindEClass, BIND__VAL);
+		assignEClass = createEClass(ASSIGN);
+		createEAttribute(assignEClass, ASSIGN__NAME);
+		createEReference(assignEClass, ASSIGN__VAL);
 	}
 
 	/**
@@ -282,9 +407,13 @@ public class SimplealPackageImpl extends EPackageImpl implements SimplealPackage
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
+		varRefEClass.getESuperTypes().add(this.getArith());
+		arithLitEClass.getESuperTypes().add(this.getArith());
+		arithOpEClass.getESuperTypes().add(this.getArith());
+		arithPlusEClass.getESuperTypes().add(this.getArithOp());
+		arithMinusEClass.getESuperTypes().add(this.getArithOp());
 		printEClass.getESuperTypes().add(this.getStmt());
-		printVarEClass.getESuperTypes().add(this.getStmt());
-		bindEClass.getESuperTypes().add(this.getStmt());
+		assignEClass.getESuperTypes().add(this.getStmt());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(blockEClass, Block.class, "Block", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -292,15 +421,28 @@ public class SimplealPackageImpl extends EPackageImpl implements SimplealPackage
 
 		initEClass(stmtEClass, Stmt.class, "Stmt", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
+		initEClass(arithEClass, Arith.class, "Arith", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(varRefEClass, VarRef.class, "VarRef", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getVarRef_Name(), ecorePackage.getEString(), "name", null, 0, 1, VarRef.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(arithLitEClass, ArithLit.class, "ArithLit", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getArithLit_Val(), ecorePackage.getEInt(), "val", null, 0, 1, ArithLit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(arithOpEClass, ArithOp.class, "ArithOp", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getArithOp_Lhs(), this.getArith(), null, "lhs", null, 0, 1, ArithOp.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getArithOp_Rhs(), this.getArith(), null, "rhs", null, 0, 1, ArithOp.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(arithPlusEClass, ArithPlus.class, "ArithPlus", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(arithMinusEClass, ArithMinus.class, "ArithMinus", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
 		initEClass(printEClass, Print.class, "Print", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getPrint_Msg(), ecorePackage.getEString(), "msg", null, 0, 1, Print.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getPrint_Name(), ecorePackage.getEString(), "name", null, 0, 1, Print.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(printVarEClass, PrintVar.class, "PrintVar", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getPrintVar_VarName(), ecorePackage.getEString(), "varName", null, 0, 1, PrintVar.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(bindEClass, Bind.class, "Bind", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getBind_Name(), ecorePackage.getEString(), "name", null, 0, 1, Bind.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getBind_Val(), ecorePackage.getEString(), "val", null, 0, 1, Bind.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(assignEClass, Assign.class, "Assign", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getAssign_Name(), ecorePackage.getEString(), "name", null, 0, 1, Assign.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getAssign_Val(), this.getArith(), null, "val", null, 0, 1, Assign.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);

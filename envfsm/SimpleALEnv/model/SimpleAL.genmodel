@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
-    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/SimpleAL/src/main/java" modelPluginID="SimpleAL"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/SimpleALEnv/src/main/java" modelPluginID="SimpleALEnv"
     modelName="SimpleAL" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
     importerID="org.eclipse.emf.importer.ecore" complianceLevel="8.0" copyrightFields="false"
     operationReflection="true" importOrganizing="true">
@@ -10,15 +10,25 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SimpleAL.ecore#//Block/stmts"/>
     </genClasses>
     <genClasses image="false" ecoreClass="SimpleAL.ecore#//Stmt"/>
+    <genClasses image="false" ecoreClass="SimpleAL.ecore#//Arith"/>
+    <genClasses ecoreClass="SimpleAL.ecore#//VarRef">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SimpleAL.ecore#//VarRef/name"/>
+    </genClasses>
+    <genClasses ecoreClass="SimpleAL.ecore#//ArithLit">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SimpleAL.ecore#//ArithLit/val"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="SimpleAL.ecore#//ArithOp">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SimpleAL.ecore#//ArithOp/lhs"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SimpleAL.ecore#//ArithOp/rhs"/>
+    </genClasses>
+    <genClasses ecoreClass="SimpleAL.ecore#//ArithPlus"/>
+    <genClasses ecoreClass="SimpleAL.ecore#//ArithMinus"/>
     <genClasses ecoreClass="SimpleAL.ecore#//Print">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SimpleAL.ecore#//Print/msg"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SimpleAL.ecore#//Print/name"/>
     </genClasses>
-    <genClasses ecoreClass="SimpleAL.ecore#//PrintVar">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SimpleAL.ecore#//PrintVar/varName"/>
-    </genClasses>
-    <genClasses ecoreClass="SimpleAL.ecore#//Bind">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SimpleAL.ecore#//Bind/name"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SimpleAL.ecore#//Bind/val"/>
+    <genClasses ecoreClass="SimpleAL.ecore#//Assign">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SimpleAL.ecore#//Assign/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SimpleAL.ecore#//Assign/val"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

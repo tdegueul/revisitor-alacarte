@@ -39,6 +39,7 @@ public class BindActionImpl extends MinimalEObjectImpl.Container implements Bind
 	 * @ordered
 	 */
 	protected Block delegate;
+
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

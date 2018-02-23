@@ -1,10 +1,12 @@
 package simpleal.main;
 
-import simpleal.Bind;
+import simpleal.ArithLit;
+import simpleal.ArithPlus;
+import simpleal.Assign;
 import simpleal.Block;
 import simpleal.Print;
-import simpleal.PrintVar;
 import simpleal.SimplealFactory;
+import simpleal.VarRef;
 import simpleal.sem.eval.Env;
 import simpleal.sem.eval.EvalSimpleAL;
 import simpleal.sem.print.PrintSimpleAL;
@@ -15,7 +17,7 @@ public class Main {
 		PrintSimpleAL printSem = new PrintSimpleAL(){};
 		EvalSimpleAL evalSem = new EvalSimpleAL(){};
 		Env env = new Env();
-		env.bind("a", "foo");
+		env.bind("i", 1);
 
 		System.out.println("Print:");
 		System.out.println(printSem.$(pgm).print());
@@ -29,23 +31,28 @@ public class Main {
 		SimplealFactory fact = SimplealFactory.eINSTANCE;
 		Block b = fact.createBlock();
 		
-		Print p = fact.createPrint();
-		p.setMsg("Printing a");
+		Print p1 = fact.createPrint();
+		p1.setName("i");
 		
-		PrintVar pv1 = fact.createPrintVar();
-		pv1.setVarName("a");
+		ArithPlus p = fact.createArithPlus();
+		VarRef v = fact.createVarRef();
+		ArithLit l = fact.createArithLit();
+
+		v.setName("i");
+		l.setVal(1);
+		p.setLhs(v);
+		p.setRhs(l);
 		
-		Bind bi = fact.createBind();
-		bi.setName("a");
-		bi.setVal("bar");
+		Assign a = fact.createAssign();
+		a.setName("i");
+		a.setVal(p);
 		
-		PrintVar pv2 = fact.createPrintVar();
-		pv2.setVarName("a");
+		Print p2 = fact.createPrint();
+		p2.setName("i");
 		
-		b.getStmts().add(p);
-		b.getStmts().add(pv1);
-		b.getStmts().add(bi);
-		b.getStmts().add(pv2);
+		b.getStmts().add(p1);
+		b.getStmts().add(a);
+		b.getStmts().add(p2);
 		
 		return b;
 	}

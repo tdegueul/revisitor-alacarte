@@ -13,6 +13,7 @@ import boolexp.Not;
 import boolexp.Or;
 import boolexp.Tru;
 import boolexp.VarRef;
+
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;

@@ -76,16 +76,36 @@ public class SimplealAdapterFactory extends AdapterFactoryImpl {
 				return createStmtAdapter();
 			}
 			@Override
+			public Adapter caseArith(Arith object) {
+				return createArithAdapter();
+			}
+			@Override
+			public Adapter caseVarRef(VarRef object) {
+				return createVarRefAdapter();
+			}
+			@Override
+			public Adapter caseArithLit(ArithLit object) {
+				return createArithLitAdapter();
+			}
+			@Override
+			public Adapter caseArithOp(ArithOp object) {
+				return createArithOpAdapter();
+			}
+			@Override
+			public Adapter caseArithPlus(ArithPlus object) {
+				return createArithPlusAdapter();
+			}
+			@Override
+			public Adapter caseArithMinus(ArithMinus object) {
+				return createArithMinusAdapter();
+			}
+			@Override
 			public Adapter casePrint(Print object) {
 				return createPrintAdapter();
 			}
 			@Override
-			public Adapter casePrintVar(PrintVar object) {
-				return createPrintVarAdapter();
-			}
-			@Override
-			public Adapter caseBind(Bind object) {
-				return createBindAdapter();
+			public Adapter caseAssign(Assign object) {
+				return createAssignAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -136,6 +156,90 @@ public class SimplealAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link simpleal.Arith <em>Arith</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see simpleal.Arith
+	 * @generated
+	 */
+	public Adapter createArithAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link simpleal.VarRef <em>Var Ref</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see simpleal.VarRef
+	 * @generated
+	 */
+	public Adapter createVarRefAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link simpleal.ArithLit <em>Arith Lit</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see simpleal.ArithLit
+	 * @generated
+	 */
+	public Adapter createArithLitAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link simpleal.ArithOp <em>Arith Op</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see simpleal.ArithOp
+	 * @generated
+	 */
+	public Adapter createArithOpAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link simpleal.ArithPlus <em>Arith Plus</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see simpleal.ArithPlus
+	 * @generated
+	 */
+	public Adapter createArithPlusAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link simpleal.ArithMinus <em>Arith Minus</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see simpleal.ArithMinus
+	 * @generated
+	 */
+	public Adapter createArithMinusAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link simpleal.Print <em>Print</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -150,30 +254,16 @@ public class SimplealAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link simpleal.PrintVar <em>Print Var</em>}'.
+	 * Creates a new adapter for an object of class '{@link simpleal.Assign <em>Assign</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see simpleal.PrintVar
+	 * @see simpleal.Assign
 	 * @generated
 	 */
-	public Adapter createPrintVarAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link simpleal.Bind <em>Bind</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see simpleal.Bind
-	 * @generated
-	 */
-	public Adapter createBindAdapter() {
+	public Adapter createAssignAdapter() {
 		return null;
 	}
 

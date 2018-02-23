@@ -57,9 +57,12 @@ public class SimplealFactoryImpl extends EFactoryImpl implements SimplealFactory
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
 			case SimplealPackage.BLOCK: return createBlock();
+			case SimplealPackage.VAR_REF: return createVarRef();
+			case SimplealPackage.ARITH_LIT: return createArithLit();
+			case SimplealPackage.ARITH_PLUS: return createArithPlus();
+			case SimplealPackage.ARITH_MINUS: return createArithMinus();
 			case SimplealPackage.PRINT: return createPrint();
-			case SimplealPackage.PRINT_VAR: return createPrintVar();
-			case SimplealPackage.BIND: return createBind();
+			case SimplealPackage.ASSIGN: return createAssign();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -80,6 +83,46 @@ public class SimplealFactoryImpl extends EFactoryImpl implements SimplealFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public VarRef createVarRef() {
+		VarRefImpl varRef = new VarRefImpl();
+		return varRef;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ArithLit createArithLit() {
+		ArithLitImpl arithLit = new ArithLitImpl();
+		return arithLit;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ArithPlus createArithPlus() {
+		ArithPlusImpl arithPlus = new ArithPlusImpl();
+		return arithPlus;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ArithMinus createArithMinus() {
+		ArithMinusImpl arithMinus = new ArithMinusImpl();
+		return arithMinus;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public Print createPrint() {
 		PrintImpl print = new PrintImpl();
 		return print;
@@ -90,19 +133,9 @@ public class SimplealFactoryImpl extends EFactoryImpl implements SimplealFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public PrintVar createPrintVar() {
-		PrintVarImpl printVar = new PrintVarImpl();
-		return printVar;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Bind createBind() {
-		BindImpl bind = new BindImpl();
-		return bind;
+	public Assign createAssign() {
+		AssignImpl assign = new AssignImpl();
+		return assign;
 	}
 
 	/**

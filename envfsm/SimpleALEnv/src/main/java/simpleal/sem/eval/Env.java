@@ -4,17 +4,17 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Env {
-	Map<String, String> env = new HashMap<>();
+	Map<String, Integer> env = new HashMap<>();
 
-	public void bind(String s, String v) {
+	public void bind(String s, Integer v) {
 		env.put(s, v);
 	}
 	
-	public String get(String s) {
+	public Integer get(String s) {
 		return env.get(s);
 	}
 	
-	public Map<String, String> getEnv() {
+	public Map<String, Integer> getEnv() {
 		return env;
 	}
 }

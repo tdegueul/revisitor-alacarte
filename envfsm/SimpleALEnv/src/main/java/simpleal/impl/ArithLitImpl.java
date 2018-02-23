@@ -8,49 +8,49 @@ import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
-import simpleal.PrintVar;
+import simpleal.ArithLit;
 import simpleal.SimplealPackage;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Print Var</b></em>'.
+ * An implementation of the model object '<em><b>Arith Lit</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link simpleal.impl.PrintVarImpl#getVarName <em>Var Name</em>}</li>
+ *   <li>{@link simpleal.impl.ArithLitImpl#getVal <em>Val</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class PrintVarImpl extends StmtImpl implements PrintVar {
+public class ArithLitImpl extends ArithImpl implements ArithLit {
 	/**
-	 * The default value of the '{@link #getVarName() <em>Var Name</em>}' attribute.
+	 * The default value of the '{@link #getVal() <em>Val</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getVarName()
+	 * @see #getVal()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String VAR_NAME_EDEFAULT = null;
+	protected static final int VAL_EDEFAULT = 0;
 
 	/**
-	 * The cached value of the '{@link #getVarName() <em>Var Name</em>}' attribute.
+	 * The cached value of the '{@link #getVal() <em>Val</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getVarName()
+	 * @see #getVal()
 	 * @generated
 	 * @ordered
 	 */
-	protected String varName = VAR_NAME_EDEFAULT;
+	protected int val = VAL_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected PrintVarImpl() {
+	protected ArithLitImpl() {
 		super();
 	}
 
@@ -61,7 +61,7 @@ public class PrintVarImpl extends StmtImpl implements PrintVar {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return SimplealPackage.Literals.PRINT_VAR;
+		return SimplealPackage.Literals.ARITH_LIT;
 	}
 
 	/**
@@ -69,8 +69,8 @@ public class PrintVarImpl extends StmtImpl implements PrintVar {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getVarName() {
-		return varName;
+	public int getVal() {
+		return val;
 	}
 
 	/**
@@ -78,11 +78,11 @@ public class PrintVarImpl extends StmtImpl implements PrintVar {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setVarName(String newVarName) {
-		String oldVarName = varName;
-		varName = newVarName;
+	public void setVal(int newVal) {
+		int oldVal = val;
+		val = newVal;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SimplealPackage.PRINT_VAR__VAR_NAME, oldVarName, varName));
+			eNotify(new ENotificationImpl(this, Notification.SET, SimplealPackage.ARITH_LIT__VAL, oldVal, val));
 	}
 
 	/**
@@ -93,8 +93,8 @@ public class PrintVarImpl extends StmtImpl implements PrintVar {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case SimplealPackage.PRINT_VAR__VAR_NAME:
-				return getVarName();
+			case SimplealPackage.ARITH_LIT__VAL:
+				return getVal();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -107,8 +107,8 @@ public class PrintVarImpl extends StmtImpl implements PrintVar {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case SimplealPackage.PRINT_VAR__VAR_NAME:
-				setVarName((String)newValue);
+			case SimplealPackage.ARITH_LIT__VAL:
+				setVal((Integer)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -122,8 +122,8 @@ public class PrintVarImpl extends StmtImpl implements PrintVar {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case SimplealPackage.PRINT_VAR__VAR_NAME:
-				setVarName(VAR_NAME_EDEFAULT);
+			case SimplealPackage.ARITH_LIT__VAL:
+				setVal(VAL_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -137,8 +137,8 @@ public class PrintVarImpl extends StmtImpl implements PrintVar {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case SimplealPackage.PRINT_VAR__VAR_NAME:
-				return VAR_NAME_EDEFAULT == null ? varName != null : !VAR_NAME_EDEFAULT.equals(varName);
+			case SimplealPackage.ARITH_LIT__VAL:
+				return val != VAL_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -153,10 +153,10 @@ public class PrintVarImpl extends StmtImpl implements PrintVar {
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (varName: ");
-		result.append(varName);
+		result.append(" (val: ");
+		result.append(val);
 		result.append(')');
 		return result.toString();
 	}
 
-} //PrintVarImpl
+} //ArithLitImpl

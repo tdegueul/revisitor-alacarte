@@ -19,31 +19,31 @@ import simpleal.SimplealPackage;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link simpleal.impl.PrintImpl#getMsg <em>Msg</em>}</li>
+ *   <li>{@link simpleal.impl.PrintImpl#getName <em>Name</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class PrintImpl extends StmtImpl implements Print {
 	/**
-	 * The default value of the '{@link #getMsg() <em>Msg</em>}' attribute.
+	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getMsg()
+	 * @see #getName()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String MSG_EDEFAULT = null;
+	protected static final String NAME_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #getMsg() <em>Msg</em>}' attribute.
+	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getMsg()
+	 * @see #getName()
 	 * @generated
 	 * @ordered
 	 */
-	protected String msg = MSG_EDEFAULT;
+	protected String name = NAME_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -69,8 +69,8 @@ public class PrintImpl extends StmtImpl implements Print {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getMsg() {
-		return msg;
+	public String getName() {
+		return name;
 	}
 
 	/**
@@ -78,11 +78,11 @@ public class PrintImpl extends StmtImpl implements Print {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setMsg(String newMsg) {
-		String oldMsg = msg;
-		msg = newMsg;
+	public void setName(String newName) {
+		String oldName = name;
+		name = newName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SimplealPackage.PRINT__MSG, oldMsg, msg));
+			eNotify(new ENotificationImpl(this, Notification.SET, SimplealPackage.PRINT__NAME, oldName, name));
 	}
 
 	/**
@@ -93,8 +93,8 @@ public class PrintImpl extends StmtImpl implements Print {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case SimplealPackage.PRINT__MSG:
-				return getMsg();
+			case SimplealPackage.PRINT__NAME:
+				return getName();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -107,8 +107,8 @@ public class PrintImpl extends StmtImpl implements Print {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case SimplealPackage.PRINT__MSG:
-				setMsg((String)newValue);
+			case SimplealPackage.PRINT__NAME:
+				setName((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -122,8 +122,8 @@ public class PrintImpl extends StmtImpl implements Print {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case SimplealPackage.PRINT__MSG:
-				setMsg(MSG_EDEFAULT);
+			case SimplealPackage.PRINT__NAME:
+				setName(NAME_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -137,8 +137,8 @@ public class PrintImpl extends StmtImpl implements Print {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case SimplealPackage.PRINT__MSG:
-				return MSG_EDEFAULT == null ? msg != null : !MSG_EDEFAULT.equals(msg);
+			case SimplealPackage.PRINT__NAME:
+				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -153,8 +153,8 @@ public class PrintImpl extends StmtImpl implements Print {
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (msg: ");
-		result.append(msg);
+		result.append(" (name: ");
+		result.append(name);
 		result.append(')');
 		return result.toString();
 	}

@@ -17,10 +17,11 @@ import fullfsm.BindGuard;
 import fullfsm.FullfsmFactory;
 import fullfsm.sem.eval.EvalFullFsm;
 import fullfsm.sem.print.PrintFullFsm;
-import simpleal.Bind;
+import simpleal.ArithLit;
+import simpleal.ArithPlus;
+import simpleal.Assign;
 import simpleal.Block;
 import simpleal.Print;
-import simpleal.PrintVar;
 import simpleal.SimplealFactory;
 
 public class Main {
@@ -36,8 +37,9 @@ public class Main {
 		Context ctx = new Context();
 		ctx.bind("x", true);
 		ctx.bind("y", true);
-		ctx.bind("z", "uninitialized");
-		String[] events = {"a", "b", "a", "c", "b"};
+		ctx.bind("i", 1);
+		ctx.bind("j", 1);
+		String[] events = {"a", "b", "a", "c", "b", "a", "c", "b", "a"};
 		evalSem.$(m).exec(events, ctx);
 		System.out.println("Trace: " +
 				ctx.getTrace().stream()
@@ -60,8 +62,8 @@ public class Main {
 		s2.setName("s2");
 		
 		VarDecl v = bfsmFact.createVarDecl();
-		v.setName("z");
-		v.setValue("foo");
+		v.setName("j");
+		v.setValue(1);
 		
 		s1.getDecls().add(v);
 		
@@ -102,18 +104,25 @@ public class Main {
 		
 		Block b1 = alFact.createBlock();
 		Print p1 = alFact.createPrint();
-		p1.setMsg("1 -> 2");
+		p1.setName("i");
 		b1.getStmts().add(p1);
 		
 		Block b2 = alFact.createBlock();
-		PrintVar p2 = alFact.createPrintVar();
-		p2.setVarName("z");
+		Print p2 = alFact.createPrint();
+		p2.setName("j");
 		b2.getStmts().add(p2);
 		
 		Block b3 = alFact.createBlock();
-		Bind bi = alFact.createBind();
-		bi.setName("z");
-		bi.setVal("bar");
+		Assign bi = alFact.createAssign();
+		simpleal.VarRef vr = alFact.createVarRef();
+		vr.setName("i");
+		ArithPlus ap = alFact.createArithPlus();
+		ArithLit al = alFact.createArithLit();
+		al.setVal(1);
+		ap.setLhs(vr);
+		ap.setRhs(al);
+		bi.setName("i");
+		bi.setVal(ap);
 		b3.getStmts().add(bi);
 		
 		BindAction ba1 = ffsmFact.createBindAction();

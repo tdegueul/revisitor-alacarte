@@ -1,5 +1,5 @@
 package simpleal.sem.eval;
 
-public interface IEval {
+public interface IVoidEval {
 	void eval(Env env);
 }

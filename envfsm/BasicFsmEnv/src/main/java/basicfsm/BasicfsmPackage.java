@@ -312,7 +312,6 @@ public interface BasicfsmPackage extends EPackage {
 	 */
 	int INITIAL_STATE_OPERATION_COUNT = STATE_OPERATION_COUNT + 0;
 
-
 	/**
 	 * The meta object id for the '{@link basicfsm.Action <em>Action</em>}' class.
 	 * <!-- begin-user-doc -->
@@ -414,6 +413,7 @@ public interface BasicfsmPackage extends EPackage {
 	 * @ordered
 	 */
 	int VAR_DECL_OPERATION_COUNT = 0;
+
 
 	/**
 	 * Returns the meta object for class '{@link basicfsm.Machine <em>Machine</em>}'.

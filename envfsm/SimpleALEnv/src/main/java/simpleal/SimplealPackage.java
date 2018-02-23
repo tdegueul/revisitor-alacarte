@@ -122,6 +122,246 @@ public interface SimplealPackage extends EPackage {
 	int STMT_OPERATION_COUNT = 0;
 
 	/**
+	 * The meta object id for the '{@link simpleal.impl.ArithImpl <em>Arith</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see simpleal.impl.ArithImpl
+	 * @see simpleal.impl.SimplealPackageImpl#getArith()
+	 * @generated
+	 */
+	int ARITH = 2;
+
+	/**
+	 * The number of structural features of the '<em>Arith</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARITH_FEATURE_COUNT = 0;
+
+	/**
+	 * The number of operations of the '<em>Arith</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARITH_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link simpleal.impl.VarRefImpl <em>Var Ref</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see simpleal.impl.VarRefImpl
+	 * @see simpleal.impl.SimplealPackageImpl#getVarRef()
+	 * @generated
+	 */
+	int VAR_REF = 3;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VAR_REF__NAME = ARITH_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Var Ref</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VAR_REF_FEATURE_COUNT = ARITH_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Var Ref</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VAR_REF_OPERATION_COUNT = ARITH_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link simpleal.impl.ArithLitImpl <em>Arith Lit</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see simpleal.impl.ArithLitImpl
+	 * @see simpleal.impl.SimplealPackageImpl#getArithLit()
+	 * @generated
+	 */
+	int ARITH_LIT = 4;
+
+	/**
+	 * The feature id for the '<em><b>Val</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARITH_LIT__VAL = ARITH_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Arith Lit</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARITH_LIT_FEATURE_COUNT = ARITH_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Arith Lit</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARITH_LIT_OPERATION_COUNT = ARITH_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link simpleal.impl.ArithOpImpl <em>Arith Op</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see simpleal.impl.ArithOpImpl
+	 * @see simpleal.impl.SimplealPackageImpl#getArithOp()
+	 * @generated
+	 */
+	int ARITH_OP = 5;
+
+	/**
+	 * The feature id for the '<em><b>Lhs</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARITH_OP__LHS = ARITH_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Rhs</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARITH_OP__RHS = ARITH_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>Arith Op</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARITH_OP_FEATURE_COUNT = ARITH_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of operations of the '<em>Arith Op</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARITH_OP_OPERATION_COUNT = ARITH_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link simpleal.impl.ArithPlusImpl <em>Arith Plus</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see simpleal.impl.ArithPlusImpl
+	 * @see simpleal.impl.SimplealPackageImpl#getArithPlus()
+	 * @generated
+	 */
+	int ARITH_PLUS = 6;
+
+	/**
+	 * The feature id for the '<em><b>Lhs</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARITH_PLUS__LHS = ARITH_OP__LHS;
+
+	/**
+	 * The feature id for the '<em><b>Rhs</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARITH_PLUS__RHS = ARITH_OP__RHS;
+
+	/**
+	 * The number of structural features of the '<em>Arith Plus</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARITH_PLUS_FEATURE_COUNT = ARITH_OP_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Arith Plus</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARITH_PLUS_OPERATION_COUNT = ARITH_OP_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link simpleal.impl.ArithMinusImpl <em>Arith Minus</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see simpleal.impl.ArithMinusImpl
+	 * @see simpleal.impl.SimplealPackageImpl#getArithMinus()
+	 * @generated
+	 */
+	int ARITH_MINUS = 7;
+
+	/**
+	 * The feature id for the '<em><b>Lhs</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARITH_MINUS__LHS = ARITH_OP__LHS;
+
+	/**
+	 * The feature id for the '<em><b>Rhs</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARITH_MINUS__RHS = ARITH_OP__RHS;
+
+	/**
+	 * The number of structural features of the '<em>Arith Minus</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARITH_MINUS_FEATURE_COUNT = ARITH_OP_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Arith Minus</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARITH_MINUS_OPERATION_COUNT = ARITH_OP_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link simpleal.impl.PrintImpl <em>Print</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -129,16 +369,16 @@ public interface SimplealPackage extends EPackage {
 	 * @see simpleal.impl.SimplealPackageImpl#getPrint()
 	 * @generated
 	 */
-	int PRINT = 2;
+	int PRINT = 8;
 
 	/**
-	 * The feature id for the '<em><b>Msg</b></em>' attribute.
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PRINT__MSG = STMT_FEATURE_COUNT + 0;
+	int PRINT__NAME = STMT_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Print</em>' class.
@@ -158,54 +398,15 @@ public interface SimplealPackage extends EPackage {
 	 */
 	int PRINT_OPERATION_COUNT = STMT_OPERATION_COUNT + 0;
 
-
 	/**
-	 * The meta object id for the '{@link simpleal.impl.PrintVarImpl <em>Print Var</em>}' class.
+	 * The meta object id for the '{@link simpleal.impl.AssignImpl <em>Assign</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see simpleal.impl.PrintVarImpl
-	 * @see simpleal.impl.SimplealPackageImpl#getPrintVar()
+	 * @see simpleal.impl.AssignImpl
+	 * @see simpleal.impl.SimplealPackageImpl#getAssign()
 	 * @generated
 	 */
-	int PRINT_VAR = 3;
-
-	/**
-	 * The feature id for the '<em><b>Var Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PRINT_VAR__VAR_NAME = STMT_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of structural features of the '<em>Print Var</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PRINT_VAR_FEATURE_COUNT = STMT_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of operations of the '<em>Print Var</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PRINT_VAR_OPERATION_COUNT = STMT_OPERATION_COUNT + 0;
-
-
-	/**
-	 * The meta object id for the '{@link simpleal.impl.BindImpl <em>Bind</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see simpleal.impl.BindImpl
-	 * @see simpleal.impl.SimplealPackageImpl#getBind()
-	 * @generated
-	 */
-	int BIND = 4;
+	int ASSIGN = 9;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -214,34 +415,34 @@ public interface SimplealPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BIND__NAME = STMT_FEATURE_COUNT + 0;
+	int ASSIGN__NAME = STMT_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Val</b></em>' attribute.
+	 * The feature id for the '<em><b>Val</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BIND__VAL = STMT_FEATURE_COUNT + 1;
+	int ASSIGN__VAL = STMT_FEATURE_COUNT + 1;
 
 	/**
-	 * The number of structural features of the '<em>Bind</em>' class.
+	 * The number of structural features of the '<em>Assign</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BIND_FEATURE_COUNT = STMT_FEATURE_COUNT + 2;
+	int ASSIGN_FEATURE_COUNT = STMT_FEATURE_COUNT + 2;
 
 	/**
-	 * The number of operations of the '<em>Bind</em>' class.
+	 * The number of operations of the '<em>Assign</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BIND_OPERATION_COUNT = STMT_OPERATION_COUNT + 0;
+	int ASSIGN_OPERATION_COUNT = STMT_OPERATION_COUNT + 0;
 
 
 	/**
@@ -276,6 +477,110 @@ public interface SimplealPackage extends EPackage {
 	EClass getStmt();
 
 	/**
+	 * Returns the meta object for class '{@link simpleal.Arith <em>Arith</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Arith</em>'.
+	 * @see simpleal.Arith
+	 * @generated
+	 */
+	EClass getArith();
+
+	/**
+	 * Returns the meta object for class '{@link simpleal.VarRef <em>Var Ref</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Var Ref</em>'.
+	 * @see simpleal.VarRef
+	 * @generated
+	 */
+	EClass getVarRef();
+
+	/**
+	 * Returns the meta object for the attribute '{@link simpleal.VarRef#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see simpleal.VarRef#getName()
+	 * @see #getVarRef()
+	 * @generated
+	 */
+	EAttribute getVarRef_Name();
+
+	/**
+	 * Returns the meta object for class '{@link simpleal.ArithLit <em>Arith Lit</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Arith Lit</em>'.
+	 * @see simpleal.ArithLit
+	 * @generated
+	 */
+	EClass getArithLit();
+
+	/**
+	 * Returns the meta object for the attribute '{@link simpleal.ArithLit#getVal <em>Val</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Val</em>'.
+	 * @see simpleal.ArithLit#getVal()
+	 * @see #getArithLit()
+	 * @generated
+	 */
+	EAttribute getArithLit_Val();
+
+	/**
+	 * Returns the meta object for class '{@link simpleal.ArithOp <em>Arith Op</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Arith Op</em>'.
+	 * @see simpleal.ArithOp
+	 * @generated
+	 */
+	EClass getArithOp();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link simpleal.ArithOp#getLhs <em>Lhs</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Lhs</em>'.
+	 * @see simpleal.ArithOp#getLhs()
+	 * @see #getArithOp()
+	 * @generated
+	 */
+	EReference getArithOp_Lhs();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link simpleal.ArithOp#getRhs <em>Rhs</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Rhs</em>'.
+	 * @see simpleal.ArithOp#getRhs()
+	 * @see #getArithOp()
+	 * @generated
+	 */
+	EReference getArithOp_Rhs();
+
+	/**
+	 * Returns the meta object for class '{@link simpleal.ArithPlus <em>Arith Plus</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Arith Plus</em>'.
+	 * @see simpleal.ArithPlus
+	 * @generated
+	 */
+	EClass getArithPlus();
+
+	/**
+	 * Returns the meta object for class '{@link simpleal.ArithMinus <em>Arith Minus</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Arith Minus</em>'.
+	 * @see simpleal.ArithMinus
+	 * @generated
+	 */
+	EClass getArithMinus();
+
+	/**
 	 * Returns the meta object for class '{@link simpleal.Print <em>Print</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -286,68 +591,47 @@ public interface SimplealPackage extends EPackage {
 	EClass getPrint();
 
 	/**
-	 * Returns the meta object for the attribute '{@link simpleal.Print#getMsg <em>Msg</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Msg</em>'.
-	 * @see simpleal.Print#getMsg()
-	 * @see #getPrint()
-	 * @generated
-	 */
-	EAttribute getPrint_Msg();
-
-	/**
-	 * Returns the meta object for class '{@link simpleal.PrintVar <em>Print Var</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Print Var</em>'.
-	 * @see simpleal.PrintVar
-	 * @generated
-	 */
-	EClass getPrintVar();
-
-	/**
-	 * Returns the meta object for the attribute '{@link simpleal.PrintVar#getVarName <em>Var Name</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Var Name</em>'.
-	 * @see simpleal.PrintVar#getVarName()
-	 * @see #getPrintVar()
-	 * @generated
-	 */
-	EAttribute getPrintVar_VarName();
-
-	/**
-	 * Returns the meta object for class '{@link simpleal.Bind <em>Bind</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Bind</em>'.
-	 * @see simpleal.Bind
-	 * @generated
-	 */
-	EClass getBind();
-
-	/**
-	 * Returns the meta object for the attribute '{@link simpleal.Bind#getName <em>Name</em>}'.
+	 * Returns the meta object for the attribute '{@link simpleal.Print#getName <em>Name</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see simpleal.Bind#getName()
-	 * @see #getBind()
+	 * @see simpleal.Print#getName()
+	 * @see #getPrint()
 	 * @generated
 	 */
-	EAttribute getBind_Name();
+	EAttribute getPrint_Name();
 
 	/**
-	 * Returns the meta object for the attribute '{@link simpleal.Bind#getVal <em>Val</em>}'.
+	 * Returns the meta object for class '{@link simpleal.Assign <em>Assign</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Val</em>'.
-	 * @see simpleal.Bind#getVal()
-	 * @see #getBind()
+	 * @return the meta object for class '<em>Assign</em>'.
+	 * @see simpleal.Assign
 	 * @generated
 	 */
-	EAttribute getBind_Val();
+	EClass getAssign();
+
+	/**
+	 * Returns the meta object for the attribute '{@link simpleal.Assign#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see simpleal.Assign#getName()
+	 * @see #getAssign()
+	 * @generated
+	 */
+	EAttribute getAssign_Name();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link simpleal.Assign#getVal <em>Val</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Val</em>'.
+	 * @see simpleal.Assign#getVal()
+	 * @see #getAssign()
+	 * @generated
+	 */
+	EReference getAssign_Val();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -401,6 +685,98 @@ public interface SimplealPackage extends EPackage {
 		EClass STMT = eINSTANCE.getStmt();
 
 		/**
+		 * The meta object literal for the '{@link simpleal.impl.ArithImpl <em>Arith</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see simpleal.impl.ArithImpl
+		 * @see simpleal.impl.SimplealPackageImpl#getArith()
+		 * @generated
+		 */
+		EClass ARITH = eINSTANCE.getArith();
+
+		/**
+		 * The meta object literal for the '{@link simpleal.impl.VarRefImpl <em>Var Ref</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see simpleal.impl.VarRefImpl
+		 * @see simpleal.impl.SimplealPackageImpl#getVarRef()
+		 * @generated
+		 */
+		EClass VAR_REF = eINSTANCE.getVarRef();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute VAR_REF__NAME = eINSTANCE.getVarRef_Name();
+
+		/**
+		 * The meta object literal for the '{@link simpleal.impl.ArithLitImpl <em>Arith Lit</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see simpleal.impl.ArithLitImpl
+		 * @see simpleal.impl.SimplealPackageImpl#getArithLit()
+		 * @generated
+		 */
+		EClass ARITH_LIT = eINSTANCE.getArithLit();
+
+		/**
+		 * The meta object literal for the '<em><b>Val</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ARITH_LIT__VAL = eINSTANCE.getArithLit_Val();
+
+		/**
+		 * The meta object literal for the '{@link simpleal.impl.ArithOpImpl <em>Arith Op</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see simpleal.impl.ArithOpImpl
+		 * @see simpleal.impl.SimplealPackageImpl#getArithOp()
+		 * @generated
+		 */
+		EClass ARITH_OP = eINSTANCE.getArithOp();
+
+		/**
+		 * The meta object literal for the '<em><b>Lhs</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ARITH_OP__LHS = eINSTANCE.getArithOp_Lhs();
+
+		/**
+		 * The meta object literal for the '<em><b>Rhs</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ARITH_OP__RHS = eINSTANCE.getArithOp_Rhs();
+
+		/**
+		 * The meta object literal for the '{@link simpleal.impl.ArithPlusImpl <em>Arith Plus</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see simpleal.impl.ArithPlusImpl
+		 * @see simpleal.impl.SimplealPackageImpl#getArithPlus()
+		 * @generated
+		 */
+		EClass ARITH_PLUS = eINSTANCE.getArithPlus();
+
+		/**
+		 * The meta object literal for the '{@link simpleal.impl.ArithMinusImpl <em>Arith Minus</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see simpleal.impl.ArithMinusImpl
+		 * @see simpleal.impl.SimplealPackageImpl#getArithMinus()
+		 * @generated
+		 */
+		EClass ARITH_MINUS = eINSTANCE.getArithMinus();
+
+		/**
 		 * The meta object literal for the '{@link simpleal.impl.PrintImpl <em>Print</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -411,40 +787,22 @@ public interface SimplealPackage extends EPackage {
 		EClass PRINT = eINSTANCE.getPrint();
 
 		/**
-		 * The meta object literal for the '<em><b>Msg</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute PRINT__MSG = eINSTANCE.getPrint_Msg();
+		EAttribute PRINT__NAME = eINSTANCE.getPrint_Name();
 
 		/**
-		 * The meta object literal for the '{@link simpleal.impl.PrintVarImpl <em>Print Var</em>}' class.
+		 * The meta object literal for the '{@link simpleal.impl.AssignImpl <em>Assign</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see simpleal.impl.PrintVarImpl
-		 * @see simpleal.impl.SimplealPackageImpl#getPrintVar()
+		 * @see simpleal.impl.AssignImpl
+		 * @see simpleal.impl.SimplealPackageImpl#getAssign()
 		 * @generated
 		 */
-		EClass PRINT_VAR = eINSTANCE.getPrintVar();
-
-		/**
-		 * The meta object literal for the '<em><b>Var Name</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute PRINT_VAR__VAR_NAME = eINSTANCE.getPrintVar_VarName();
-
-		/**
-		 * The meta object literal for the '{@link simpleal.impl.BindImpl <em>Bind</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see simpleal.impl.BindImpl
-		 * @see simpleal.impl.SimplealPackageImpl#getBind()
-		 * @generated
-		 */
-		EClass BIND = eINSTANCE.getBind();
+		EClass ASSIGN = eINSTANCE.getAssign();
 
 		/**
 		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
@@ -452,15 +810,15 @@ public interface SimplealPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute BIND__NAME = eINSTANCE.getBind_Name();
+		EAttribute ASSIGN__NAME = eINSTANCE.getAssign_Name();
 
 		/**
-		 * The meta object literal for the '<em><b>Val</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Val</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute BIND__VAL = eINSTANCE.getBind_Val();
+		EReference ASSIGN__VAL = eINSTANCE.getAssign_Val();
 
 	}
 

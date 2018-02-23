@@ -10,8 +10,8 @@ import basicfsm.InitialState;
 import basicfsm.Machine;
 import basicfsm.State;
 import basicfsm.Trans;
-
 import basicfsm.VarDecl;
+
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;

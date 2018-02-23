@@ -18,7 +18,7 @@ public interface EvalFullFsm
 		<
 			IExecMachine, IStepState, IFireTransition, IStepState, IRunAction, IEvalGuard, IEvalVarDecl,
 			boolexp.sem.eval.IEval,
-			simpleal.sem.eval.IEval, simpleal.sem.eval.IEval, simpleal.sem.eval.IEval, simpleal.sem.eval.IEval, simpleal.sem.eval.IEval,
+			simpleal.sem.eval.IVoidEval, simpleal.sem.eval.IVoidEval, simpleal.sem.eval.IIntEval, simpleal.sem.eval.IIntEval, simpleal.sem.eval.IIntEval, simpleal.sem.eval.IIntEval, simpleal.sem.eval.IIntEval, simpleal.sem.eval.IIntEval, simpleal.sem.eval.IVoidEval, simpleal.sem.eval.IVoidEval,
 			IRunAction, IEvalGuard
 		>,
 		EvalBasicFsm,
@@ -32,8 +32,8 @@ public interface EvalFullFsm
 			simpleal.sem.eval.Env env = new simpleal.sem.eval.Env();
 			ctx.getEnv()
 				.forEach((k, v) -> {
-					if (v instanceof String)
-						env.bind(k, (String) v);
+					if (v instanceof Integer)
+						env.bind(k, (Integer) v);
 				});
 			
 			$(it.getDelegate()).eval(env);

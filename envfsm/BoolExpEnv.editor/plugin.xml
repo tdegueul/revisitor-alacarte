@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated BoolExp -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="boolexp.presentation.BoolexpModelWizardID"
+            name="%_UI_BoolexpModelWizard_label"
+            class="boolexp.presentation.BoolexpModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/BoolexpModelFile.gif">
+         <description>%_UI_BoolexpModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated BoolExp -->
+      <editor
+            id="boolexp.presentation.BoolexpEditorID"
+            name="%_UI_BoolexpEditor_label"
+            icon="icons/full/obj16/BoolexpModelFile.gif"
+            extensions="boolexp"
+            class="boolexp.presentation.BoolexpEditor"
+            contributorClass="boolexp.presentation.BoolexpActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>

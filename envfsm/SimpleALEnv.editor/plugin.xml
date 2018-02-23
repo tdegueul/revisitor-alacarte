@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated SimpleAL -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="simpleal.presentation.SimplealModelWizardID"
+            name="%_UI_SimplealModelWizard_label"
+            class="simpleal.presentation.SimplealModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/SimplealModelFile.gif">
+         <description>%_UI_SimplealModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated SimpleAL -->
+      <editor
+            id="simpleal.presentation.SimplealEditorID"
+            name="%_UI_SimplealEditor_label"
+            icon="icons/full/obj16/SimplealModelFile.gif"
+            extensions="simpleal"
+            class="simpleal.presentation.SimplealEditor"
+            contributorClass="simpleal.presentation.SimplealActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>

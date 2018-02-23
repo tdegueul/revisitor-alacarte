@@ -11,7 +11,7 @@ public interface BasicFsmRv<M, S, T, I extends S, A, G> {
 	M machine(Machine it);
 	S state(State it);
 	T trans(Trans it);
-	I initialState(InitialState i);
+	I initialState(InitialState it);
 	
 	A $(Action it); // No concrete type to bind to
 	G $(Guard it);  // No concrete type to bind to
